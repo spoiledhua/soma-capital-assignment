@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/soma-capital-assignment/static/css/main.2c535127.chunk.css",
+    "main.js": "/soma-capital-assignment/static/js/main.8b154219.chunk.js",
+    "main.js.map": "/soma-capital-assignment/static/js/main.8b154219.chunk.js.map",
+    "runtime-main.js": "/soma-capital-assignment/static/js/runtime-main.d1938404.js",
+    "runtime-main.js.map": "/soma-capital-assignment/static/js/runtime-main.d1938404.js.map",
+    "static/js/2.e1a15485.chunk.js": "/soma-capital-assignment/static/js/2.e1a15485.chunk.js",
+    "static/js/2.e1a15485.chunk.js.map": "/soma-capital-assignment/static/js/2.e1a15485.chunk.js.map",
+    "index.html": "/soma-capital-assignment/index.html",
+    "precache-manifest.edc6c64c673807dbfd77fd098a939a7c.js": "/soma-capital-assignment/precache-manifest.edc6c64c673807dbfd77fd098a939a7c.js",
+    "service-worker.js": "/soma-capital-assignment/service-worker.js",
+    "static/css/main.2c535127.chunk.css.map": "/soma-capital-assignment/static/css/main.2c535127.chunk.css.map",
+    "static/media/falcon1.jpg": "/soma-capital-assignment/static/media/falcon1.1ef66f51.jpg",
+    "static/media/falcon9.jpg": "/soma-capital-assignment/static/media/falcon9.c68ad52c.jpg",
+    "static/media/falconheavy.jpg": "/soma-capital-assignment/static/media/falconheavy.efb5ed00.jpg",
+    "static/media/starship.jpg": "/soma-capital-assignment/static/media/starship.47edea8e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d1938404.js",
+    "static/js/2.e1a15485.chunk.js",
+    "static/css/main.2c535127.chunk.css",
+    "static/js/main.8b154219.chunk.js"
+  ]
+}
