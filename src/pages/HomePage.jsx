@@ -16,6 +16,7 @@ import starship from '../images/starship.jpg';
 
 import { selectRocket } from '../redux/actions/rocket';
 import { selectLaunches } from '../redux/actions/launches';
+import { searchLaunches } from '../redux/actions/launches';
 
 const useStyles = makeStyles({
   container: {
@@ -41,7 +42,7 @@ const useStyles = makeStyles({
   }
 });
 
-const HomePage = ({ rocket, launches, selectRocket, selectLaunches }) => {
+const HomePage = ({ rocket, launches, selectRocket, selectLaunches, searchLaunches }) => {
 
   const classes = useStyles();
 
@@ -57,7 +58,7 @@ const HomePage = ({ rocket, launches, selectRocket, selectLaunches }) => {
             <h1>SpaceX Rockets</h1>
           </Grid>
           <Grid className={classes.title} item align="center" xs={12} sm={12} md={4} lg={4} xl={4}>
-            <TextField className={classes.textField} placeholder="Search Missions..." type="search" variant="outlined" fullWidth />
+            <TextField className={classes.textField} placeholder="Search Missions..." type="search" variant="outlined" fullWidth onChange={(e) => searchLaunches(e.target.value)} />
           </Grid>
           <Grid className={classes.card} item align="center" xs={12} sm={6} md={3} lg={3} xl={3}>
             <RocketCard rocketId="falcon1" rocketName="Falcon 1" image={falcon1} onCardClick={selectRocket} getLaunches={selectLaunches} />
@@ -104,6 +105,9 @@ const mapDispatchToProps = (dispatch) => {
     selectLaunches: rocketId => {
       dispatch(selectLaunches(rocketId))
     },
+    searchLaunches: search => {
+      dispatch(searchLaunches(search))
+    }
   }
 }
 

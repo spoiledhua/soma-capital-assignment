@@ -3,7 +3,6 @@ import AppLayout from './layouts/AppLayout';
 
 // pages
 import HomePage from './pages/HomePage';
-import TestPage from './pages/TestPage';
 
 /*
  * @param {Redux Store}
@@ -19,11 +18,6 @@ export default () => {
         {
           component: HomePage,
           path: '/',
-          exact: true,
-        },
-        {
-          component: TestPage,
-          path: '/test',
           exact: true,
         },
         {

@@ -1,7 +1,8 @@
 import {
     SELECT_LAUNCHES_BEGIN,
     SELECT_LAUNCHES_SUCCESS,
-    SELECT_LAUNCHES_FAILURE
+    SELECT_LAUNCHES_FAILURE,
+    SEARCH_LAUNCHES
   } from '../types';
 
 export const selectLaunchesBegin = () => {
@@ -34,3 +35,10 @@ export const selectLaunches = rocketId => async dispatch => {
         .then(result => dispatch(selectLaunchesSuccess(result)))
         .catch(error => dispatch(selectLaunchesFailure(error)))
 };
+
+export const searchLaunches = search => {
+    return {
+        type: SEARCH_LAUNCHES,
+        search: search
+    }
+}
