@@ -54,7 +54,7 @@ Implement a task dependency system that allows tasks to depend on other tasks. T
 
 Thanks for your time and effort. We'll be in touch soon!
 
-### Solution
+## Solution
 
 I implemented the three requirements for this assessment: due dates, image generation, and task dependencies. The due dates and image generation were smaller changes and self-explanatory.
 
