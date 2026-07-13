@@ -8,7 +8,24 @@ datasource db {
 }
 
 model Todo {
-  id        Int      @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   title     String
   createdAt DateTime  @default(now())
+  dueDate   DateTime  // Required for critical path calculation
+  imageUrl  String?
+
+  // Explicit many-to-many via join table
+  dependsOn      TodoDependency[] @relation("DependentTask")
+  dependentTasks TodoDependency[] @relation("PrerequisiteTask")
+}
+
+model TodoDependency {
+  id             Int  @id @default(autoincrement())
+  dependentId    Int  // The task that depends on another
+  prerequisiteId Int  // The task that must be completed first
+
+  dependent    Todo @relation("DependentTask", fields: [dependentId], references: [id], onDelete: Cascade)
+  prerequisite Todo @relation("PrerequisiteTask", fields: [prerequisiteId], references: [id], onDelete: Cascade)
+
+  @@unique([dependentId, prerequisiteId])
 }
